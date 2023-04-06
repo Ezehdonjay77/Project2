@@ -1,13 +1,16 @@
 html {
   /* height: 100%; */
+  background-image: linear-gradient(#fc5e55, #fa4083);
 }
 
 body {
-  background-image: linear-gradient(#fc5e55, #fa4083);
-  /* font-family: "Roboto", sans-serif; */
-  font-family: "Playfair Display", serif;
+  background-image: url(images/image-lion-background.png);
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Playfair Display", serif; */
   color: white;
   font-size: 1.23rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 a {
@@ -35,6 +38,11 @@ main {
   min-height: 300px;
   display: flex;
   align-items: center;
+}
+
+.main2 {
+  min-height: 300px;
+  padding-top: 50px;
 }
 
 .cards {
@@ -118,28 +126,29 @@ p {
   text-decoration: none;
 }
 
-.mybutton {
+.navbutton {
   background-color: white;
   color: #fa4083;
   font-family: "Playfair Display", serif;
   /* border-radius: 5px; */
   padding: 11px 25px;
   display: inline-block;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* border-radius: 5px; */
   /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.235); */
+  position: relative;
 }
 
-.mybutton:hover {
+.navbutton:hover {
   background-color: rgba(90, 140, 90, 0.804);
   transition-duration: 1s;
 }
 
-.mybutton:active {
+.navbutton:active {
   background-color: blue;
 }
 
-nav .mybutton {
+nav .navbutton {
   /* margin-left: 30px; */
   background-color: transparent;
   border: 1px solid white;
@@ -168,4 +177,32 @@ nav .mybutton {
 
 .tbox p:last-of-type {
   font-size: 0.8rem;
+  padding-left: 30px;
+}
+
+.dropdown-box {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 20px;
+  text-align: center;
+  margin-left: -40px;
+}
+
+.navbutton:hover .dropdown-box {
+  display: block;
+}
+
+.dropdown-box .navbutton {
+  width: 150px;
+  background-color: white;
+}
+
+.dropdown-box .navbutton a {
+  color: #fa4083;
+}
+
+.dropdown-box .navbutton:hover {
+  background-color: rgba(90, 140, 90, 0.804);
+  transition-duration: 1s;
 }
